@@ -1,0 +1,116 @@
+Script started on Tue Jan 27 03:46:48 2015
+[?1034hsh-4.2# cat main.py
+def print_lyrics():
+    print "I'm a lumberjack, and I'm okay."
+    print "I sleep all night and I work all day."
+
+def repeat_lyrics():
+    print_lyrics()
+    print_lyrics()
+    
+repeat_lyrics()sh-4.2# # THis     his is the original code from teh t          sh-4.2# [17Pcat main.pysh-4.2# # This is the original code                             # This is the original code from the text
+sh-4.2# thei      python main.py
+Traceback (most recent call last):
+  File "main.py", line 1, in <module>
+    repeat_lyrics()
+NameError: name 'repeat_lyrics' is not defined
+sh-4.2# # A fucntion wa  must be f defined before it is called
+sh-4.2# cat main.py
+repeat_lyrics()
+
+def print_lyrics():
+    print "I'm a lumberjack, and I'm okay."
+    print "I sleep all night and I work all day."
+
+def repeat_lyrics():
+    print_lyrics()
+    print_lyrics()
+    
+sh-4.2# This is         # THis     his is the incorrect code
+sh-4.2# python main.py
+I'm a lumberjack, and I'm okay.
+I sleep all night and I work all day.
+I'm a lumberjack, and I'm okay.
+I sleep all night and I work all day.
+sh-4.2# cat mian   ain.py
+def repeat_lyrics():
+    print_lyrics()
+    print_lyrics()
+ 
+def print_lyrics():
+    print "I'm a lumberjack, and I'm okay."
+    print "I sleep all night and I work all day." 
+    
+repeat_lyrics()sh-4.2# # This works because the fucniton        nction was a called after  a [Ash-4.2# # This works because the function was called after  [K[Ash-4.2# # This works because the function was called after[K
+[K[Ash-4.2# # This works because the function was called aftera ll  [Ash-4.2# # This works because the function was called aftera [K[Ash-4.2# # This works because the function was called after[K
+[K[Ash-4.2# # This works because the function was called after  all pieces were defined
+sh-4.2# python main.py
+spam
+spam
+sh-4.2# cat main.py
+def do_twice(f):
+    f()
+    f()
+
+def print_spam():
+    print 'spam'
+
+do_twice(print_spam)sh-4.2# # I tested the code form     rom the text
+sh-4.2# cat main.py
+def do_twice(f, a):
+    f(a)
+    f(a)
+
+def print_spam():
+    print 'spam'
+
+do_twice(print_spam)sh-4.2# # I modified do_twice w to have to arguments
+sh-4.2# cat main.py
+def do_twice(f, s):
+    f(s)
+    f(s)
+
+def print_twice(s):
+    print s
+    print s
+sh-4.2# # I ca hange  d print_spam to be      print_twice to make it ge neral
+sh-4.2# python main.py
+sh-4.2# python main.py
+meow
+meow
+sh-4.2# python main.py
+spam
+spam
+spam
+spam
+sh-4.2# python main.py
+sh-4.2# python main.py
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    do_four(print_twice, meow)
+NameError: name 'meow' is not defined
+sh-4.2# python main.py
+meow
+meow
+meow
+meow
+meow
+meow
+meow
+meow
+sh-4.2# # I used meow and     and print_twice as teh    he arguments in t he do_four functions 
+sh-4.2# cat main.py
+def do_twice(f, s):
+    f(s)
+    f(s)
+
+def print_twice(s):
+    print s
+    print s
+
+def do_four(f, s):
+    do_twice(f, s)
+    do_twice(f, s)
+
+do_four(print_twice, 'meow')
+sh-4.2# 
